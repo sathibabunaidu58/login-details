@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Home  {% endblock %}
+
+{% block content %}
+<div class="media-body">
+<h1 class='text-success'>hello {{ current_user.name }}</h1>
+<div class='container'>
+    <div class='row'>
+        <div class='text-center mt-5 text-primary fs-1 fw-bolder'>
+            <p>Email : {{current_user.email}}</p>
+            <p> Number : {{current_user.number}}</p>
+            <p> Password : {{current_user.password}}</p>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+{% endblock %}

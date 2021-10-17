@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} signup  {% endblock %}
+
+{% block content %}
+<form action="" method='POST'  >
+    <h1 class="text-center text-primary m-3">Signup</h1>
+    <div class='form-group d-flex flex-column'>
+        <label for="name" class=' text-success fs-3 '>Name</label>
+        <input type="text" placeholder="Enter Name"  class=" shadow-lg p-3 m-2 bg-body rounded border border-5 border-success "  id="name" name='name' >
+        
+        <label for="email" class=' text-success fs-3'> Email</label>
+        <input type="email" placeholder="Enter Email" class="shadow-lg p-3 m-2 bg-body rounded border border-5 border-primary " id='email' name='email' >
+        
+        <label for="number" class=' text-success fs-3'>Number</label>
+        <input type="text" placeholder="Enter Number" class="shadow-lg p-3 m-2 bg-body rounded border border-5 border-warning"  id="number" name='number' >
+        
+        <label for="password" class=' text-success fs-3'>PassWord</label>
+        <input type="password" placeholder="Enter Paswword" class="shadow-lg p-3 m-2 bg-body rounded border border-5 border-danger"  id="password" name='password' >
+        
+        <label for="password1"  class=' text-success fs-3'>Confirm-PassWord</label>
+        <input type="password" placeholder="Confirm-PassWord" class="shadow-lg p-3 m-2 bg-body rounded border border-5 border-danger"  id="password1" name='password1' >
+        
+
+    </div>
+    <div>
+        <button type='submit' class="btn btn-primary m-3">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
