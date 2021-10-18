@@ -39,7 +39,7 @@ def load_user(id):
     return chat.query.get(int(id))
 
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/login', methods=['POST','GET'])
 def login():
     if request.method=='POST':
         email=request.form['email']
@@ -63,7 +63,7 @@ def login():
     
     return render_template('login.html', users=current_user)
 
-@app.route('/home')
+@app.route('/')
 @login_required
 def home():
     return render_template('home.html', users=current_user)
@@ -99,12 +99,9 @@ def signup():
             add_items=chat(name,email,number,pass1)
             db.session.add(add_items)
             db.session.commit()
-            
+            login_user(user,remember=True)
             return redirect(url_for('login'))
-    
-         
-            
-        
+ 
         
     return render_template('signup.html', users=current_user)
 
